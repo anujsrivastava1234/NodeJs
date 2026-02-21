@@ -1,11 +1,9 @@
-//import http
 const http = require('http');
-
 const routes = require('./routes');
 
 console.log(routes.text);
-//create a server
+
 const server = http.createServer(routes.handler);
 
-//listen to server
 server.listen(3000);
+
