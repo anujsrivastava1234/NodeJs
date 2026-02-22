@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{docTitle}
+    body 
+        header.main-header 
+            nav.main-header__nav 
+                ul.main-header__item-list
+                    li.main-header__item
+                        a.active(href="/") Shop
+                    li.main-heaader__item
+                        a.active(href="/admin/add-product") Add Product  
+        
+        main
+            .grid
+                each product in prods
+                    article 
+                        header 
+                            h1 #{product.title}
+                        div 
+                            img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6fhX4BnM-OYVjGwoQXV93mVcqd-erDPdkGQ&s", alt="")
+                        div 
+                            h2 $19
+                            p A Good Book 
+                        button Add to Cart
